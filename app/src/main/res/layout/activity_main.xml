@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/home_company_name"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@id/top_guideline" />
+
+    <TextView
+        android:id="@+id/home_company_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/home_company_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/company_motto"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
+    <TextView
+        android:id="@+id/company_motto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/company_motto_1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/next_button_main"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/home_company_name" />
+
+    <Button
+        android:id="@+id/next_button_main"
+        style="@android:style/Widget.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:drawableEnd="@drawable/next_arrow"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/next_button"
+        android:textAllCaps="true"
+        android:textColor="@color/cardview_light_background"
+        app:layout_constraintBottom_toTopOf="@id/show_all_record"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/company_motto"
+        tools:ignore="PrivateResource" />
+
+        <Button
+            android:id="@+id/show_all_record"
+            style="@android:style/Widget.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_dark"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/show_all_record"
+            android:textAllCaps="true"
+            android:textColor="@color/cardview_light_background"
+            app:layout_constraintBottom_toTopOf="@id/bottom_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+            app:layout_constraintStart_toStartOf="@+id/left_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/next_button_main"
+            tools:ignore="PrivateResource" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05787037" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

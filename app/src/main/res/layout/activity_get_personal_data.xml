@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/header_heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/header_heading"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@id/top_guideline"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/sub_heading_personal_details"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/header_heading">
+
+        <LinearLayout
+            android:id="@+id/inner_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/header_msg_line_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/header_msg_line_1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+            <TextView
+                android:id="@+id/header_phone_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:text="@string/header_phone_no"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/holo_orange_light"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/header_msg_line_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/header_msg_line_2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+    </LinearLayout>
+
+            <TextView
+                android:id="@+id/sub_heading_personal_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sub_heading_personal_details"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/required"
+                app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                />
+
+            <TextView
+                android:id="@+id/required"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/required"
+                android:textColor="@android:color/holo_red_dark"
+                app:layout_constraintBottom_toTopOf="@+id/f_name"
+                app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/sub_heading_personal_details"/>
+
+            <TextView
+                android:id="@+id/f_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/f_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                app:layout_constraintBottom_toTopOf="@+id/input_f_name"
+                app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/required"/>
+
+                <EditText
+                    android:id="@+id/input_f_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:textIsSelectable="false"
+                    app:layout_constraintBottom_toTopOf="@+id/l_name"
+                    app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/f_name"
+                    android:hint="@string/ali"
+                    android:autofillHints="@string/ali"/>
+
+            <TextView
+                android:id="@+id/l_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/l_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                app:layout_constraintBottom_toTopOf="@+id/input_l_name"
+                app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/input_f_name"/>
+
+                <EditText
+                    android:id="@+id/input_l_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:textIsSelectable="false"
+                    app:layout_constraintBottom_toTopOf="@+id/email"
+                    app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/l_name"
+                    android:hint="@string/last_name"
+                    android:autofillHints="@string/last_name" />
+
+    <TextView
+                android:id="@+id/email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toTopOf="@+id/input_email"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/input_l_name"/>
+
+                <EditText
+                    android:id="@+id/input_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textIsSelectable="false"
+                    app:layout_constraintBottom_toTopOf="@+id/no_"
+                    app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/email"
+                    android:autofillHints="@string/email_email_com"
+                    android:hint="@string/email_email_com"/>
+
+            <TextView
+                android:id="@+id/no_"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                app:layout_constraintBottom_toTopOf="@+id/input_no"
+                app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/input_email"/>
+
+                <EditText
+                    android:id="@+id/input_no"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:textIsSelectable="false"
+                    app:layout_constraintBottom_toTopOf="@+id/next_button_personal_data"
+                    app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/no_"
+                    android:autofillHints="@string/_0900788601"
+                    android:hint="@string/_0900788601" />
+
+            <Button
+                android:id="@+id/next_button_personal_data"
+                style="@android:style/Widget.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_light"
+                android:drawableEnd="@drawable/next_arrow"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/next_button"
+                android:textAllCaps="true"
+                android:textColor="@color/cardview_light_background"
+                tools:ignore="PrivateResource"
+                app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                app:layout_constraintBottom_toTopOf="@+id/pre_button_personal_data"
+                app:layout_constraintTop_toBottomOf="@+id/input_no"/>
+
+            <Button
+                android:id="@+id/pre_button_personal_data"
+                style="@android:style/Widget.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/darker_gray"
+                android:drawableStart="@drawable/pre_arrow"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/previous"
+                android:textAllCaps="true"
+                android:textColor="@color/cardview_light_background"
+                app:layout_constraintBottom_toTopOf="@id/bottom_guideline"
+                app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/next_button_personal_data"
+                tools:ignore="PrivateResource" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/left_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.10" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/right_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.90" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/top_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.05787037" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/bottom_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.95" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

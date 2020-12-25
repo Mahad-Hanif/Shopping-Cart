@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/header_heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/header_heading"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/success"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@id/top_guideline"/>
+
+    <TextView
+        android:id="@+id/success"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/sub_heading_order_list"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/textView11"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/header_heading"/>
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/data_msg"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintBottom_toTopOf="@id/show_company_name"
+            app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+            app:layout_constraintStart_toStartOf="@+id/left_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/success"/>
+
+        <TextView
+            android:id="@+id/show_company_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/show_company_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintBottom_toTopOf="@id/show_category"
+            app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+            app:layout_constraintStart_toStartOf="@+id/left_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/textView11"/>
+
+        <TextView
+            android:id="@+id/show_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/show_category"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintBottom_toTopOf="@id/show_full_name"
+            app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+            app:layout_constraintStart_toStartOf="@+id/left_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/show_company_name"/>
+
+            <TextView
+                android:id="@+id/show_full_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/show_full_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                app:layout_constraintBottom_toTopOf="@id/show_email"
+                app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/show_category"/>
+
+        <TextView
+            android:id="@+id/show_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/show_email"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintBottom_toTopOf="@id/show_contact"
+            app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+            app:layout_constraintStart_toStartOf="@+id/left_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/show_full_name"/>
+
+                <TextView
+                    android:id="@+id/show_contact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_contact"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    app:layout_constraintBottom_toTopOf="@id/show_address"
+                    app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/show_email"/>
+
+                <TextView
+                    android:id="@+id/show_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_address"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    app:layout_constraintBottom_toTopOf="@id/show_no_of_boxes"
+                    app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/show_contact"/>
+
+                <TextView
+                    android:id="@+id/show_no_of_boxes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_no_of_boxes"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    app:layout_constraintBottom_toTopOf="@id/pre_button_order_detail"
+                    app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/show_address"/>
+        <Button
+            android:id="@+id/pre_button_order_detail"
+            style="@android:style/Widget.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:drawableStart="@drawable/pre_arrow"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/previous"
+            android:textAllCaps="true"
+            android:textColor="@color/cardview_light_background"
+            app:layout_constraintBottom_toTopOf="@id/bottom_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+            app:layout_constraintStart_toStartOf="@+id/left_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/show_no_of_boxes"
+            tools:ignore="PrivateResource" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/left_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.10" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/right_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.90" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/top_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.05787037" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/bottom_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.95" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
